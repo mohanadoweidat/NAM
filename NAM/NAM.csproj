@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aboutUs.aspx" />
+    <Content Include="contactUs.aspx" />
     <Content Include="css\egen.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\navbar.css" />
@@ -84,6 +85,13 @@
     </Compile>
     <Compile Include="aboutUs.aspx.designer.cs">
       <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactUs.aspx.cs">
+      <DependentUpon>contactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactUs.aspx.designer.cs">
+      <DependentUpon>contactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
