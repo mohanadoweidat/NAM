@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace NAM
 {
     public partial class index : System.Web.UI.Page
     {
+        private Database.DB dB;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["logged_User"] != null)
@@ -35,7 +32,23 @@ namespace NAM
 
         private void Dash_Btn_ServerClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            dB = new Database.DB();
+            char userType = dB.checkUserType();
+            //If u press panel button and u are a user
+            if (userType == 'U')
+            {
+                Response.Redirect("~/User/userPanel.aspx");
+            }
+            //If u press panel button and u are an admin
+            else if (userType == 'A')
+            {
+                Response.Redirect("~/Admin/adminPanel.aspx");
+            }
+            //If u press panel button and u are a store admin
+            else
+            {
+                Response.Redirect("~/Store/StorePanel.aspx");
+            }
         }
 
         private void LogOut_Btn_ServerClick(object sender, EventArgs e)
@@ -47,12 +60,12 @@ namespace NAM
 
         private void SignUp_Btn_ServerClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Response.Redirect("signUp.aspx");
         }
 
         private void LogIn_Btn_ServerClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Response.Redirect("logIn.aspx");
         }
     }
 }
