@@ -1,8 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="aboutUs.aspx.cs" Inherits="NAM.aboutUs" %>
-
+ <%--Created by : Bojana Filipovic--%>
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Om oss</title>
     <!-- for-mobile-apps -->

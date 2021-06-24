@@ -1,8 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contactUs.aspx.cs" Inherits="NAM.contactUs" %>
-
+ <%--Created by : Sahand Poursadeghi Khiavi--%>
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
    <title>Kontakta oss</title>
 
