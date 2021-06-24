@@ -73,9 +73,12 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\navbar.css" />
     <Content Include="Images\appen-koncept-TransparentBg.png" />
+    <Content Include="Images\background_s.png" />
+    <Content Include="Images\NamLogo.png" />
     <Content Include="Images\NamLogo2.png" />
     <Content Include="index.aspx" />
     <Content Include="js\infoMessages.js" />
+    <Content Include="policy.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +104,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="policy.aspx.cs">
+      <DependentUpon>policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="policy.aspx.designer.cs">
+      <DependentUpon>policy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
