@@ -72,6 +72,7 @@
     <Content Include="css\egen.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\navbar.css" />
+    <Content Include="forgotPassword.aspx" />
     <Content Include="Images\appen-koncept-TransparentBg.png" />
     <Content Include="Images\background_s.png" />
     <Content Include="Images\NamLogo.png" />
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="Database\connectionString.cs" />
     <Compile Include="Database\DB.cs" />
+    <Compile Include="forgotPassword.aspx.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotPassword.aspx.designer.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
