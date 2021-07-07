@@ -12,8 +12,6 @@ namespace NAM.Database
     {
         private SqlCommand cmd;
         private SqlDataReader dr;
-        private DataTable dt;
-        private SqlDataAdapter sda;
         private SqlConnection sql;
 
         //This function will check the type of the logged user  U-User, A-Admin(NAM-developers), Other(S)- Store
@@ -48,6 +46,20 @@ namespace NAM.Database
             }
             connection.Close();
             return user;
+        }
+
+        //This function will get store name from database.
+        public SqlDataReader getStoreNameData()
+        {
+            sql = new SqlConnection(Database.connectionString.conString);
+            sql.Open();
+            cmd = new SqlCommand("sp_getStoreName", sql);
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows == false)
+            {
+                dr = null;
+            }
+            return dr;
         }
     }
 }
