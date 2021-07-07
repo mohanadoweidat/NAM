@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userPanel.aspx.cs" Inherits="NAM.User.userPanel" %>
-
+<%--Created by : Bojana Filipovic--%>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
      <title>Användarens panel</title>
@@ -82,7 +81,7 @@
 
         /* Start footer rules */
         .egen2 {
-           /*  position: fixed;
+            /*  position: fixed;
             bottom: 0;
             width: 100%;*/
         }
@@ -231,7 +230,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Åtgärder">
                          <ItemTemplate>
-                            <asp:LinkButton ID="orderBtn" runat="server" CommandName='<%# Eval("product_Id") %>' ToolTip="En knapp för att beställa">Beställ</asp:LinkButton>
+                            <asp:LinkButton ID="orderBtn" OnClick="orderBtn_Click" runat="server" CommandName='<%# Eval("product_Id") %>' ToolTip="En knapp för att beställa">Beställ</asp:LinkButton>
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
@@ -283,7 +282,7 @@
                 </asp:GridView>
                       </ContentTemplate>
             </asp:UpdatePanel>
-                <asp:SqlDataSource ID="SOURCE1" runat="server" ConnectionString='<%$ ConnectionStrings:MSSQL500015ConnectionString %>' SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SOURCE1" runat="server" ConnectionString='<%$ ConnectionStrings:MSSQL500015ConnectionString %>' SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
               </div>
           </div>
         </div>
