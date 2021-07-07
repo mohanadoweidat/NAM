@@ -83,6 +83,7 @@
     <Content Include="login.aspx" />
     <Content Include="policy.aspx" />
     <Content Include="signUp.aspx" />
+    <Content Include="User\userPanel.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="signUp.aspx.designer.cs">
       <DependentUpon>signUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\userPanel.aspx.cs">
+      <DependentUpon>userPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\userPanel.aspx.designer.cs">
+      <DependentUpon>userPanel.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
