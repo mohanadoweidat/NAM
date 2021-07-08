@@ -11,7 +11,27 @@ namespace NAM.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["logged_User"] != null)
+            {
+                logOut_Btn.Style.Add("display", "block");
+                bindGrid();
+            }
+            logOut_Btn.ServerClick += LogOut_Btn_ServerClick;
+        }
 
+        private void LogOut_Btn_ServerClick(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("../index.aspx");
+        }
+
+        private void bindGrid()
+        {
+            if (!IsPostBack)
+            {
+                ordersGrid.DataSource = SqlDataSource1;
+                ordersGrid.DataBind();
+            }
         }
     }
 }
