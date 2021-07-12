@@ -61,5 +61,30 @@ namespace NAM.Database
             }
             return dr;
         }
+
+        //Get storeName by username
+        public string getStoreNameByUsername(string username)
+        {
+            string storeName = "";
+            SqlConnection connection = new SqlConnection(Database.connectionString.conString);
+            connection.Open();
+            string query = "SELECT storeName, username FROM StoreInformation WHERE (username = '" + username + "');";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataAdapter sds = new SqlDataAdapter();
+            DataSet ds = new DataSet();
+            sds.SelectCommand = cmd;
+            int i = 0;
+            sds.Fill(ds, "storeName");
+            if (ds.Tables[i].Rows.Count > 0)
+            {
+                //Get storeName for given username
+                storeName = ds.Tables[i].Rows[i]["storeName"].ToString();
+            }
+            else
+            {
+                return null;
+            }
+            return storeName;
+        }
     }
 }
