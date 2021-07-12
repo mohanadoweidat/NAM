@@ -61,5 +61,21 @@ namespace NAM.Database
             }
             return dr;
         }
+
+        //Change status of logged in restaurant to isLogged = true
+        public void changeLoggedStatus()
+        {
+            using (sql = new SqlConnection(connectionString.conString))
+            {
+                string loggedUser = System.Web.HttpContext.Current.Session["logged_User"].ToString();
+                string Updatestat = "Update Users set isLogged='True' where username='" + loggedUser + "'";
+                sql.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = Updatestat;
+                cmd.Connection = sql;
+                cmd.ExecuteNonQuery();
+                sql.Close();
+            }
+        }
     }
 }
