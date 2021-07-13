@@ -353,36 +353,35 @@
            <center>
               <br />
               <div class="first">
-                    <h1>TEAMET BAKOM NAM</h1>
+                    <h1 style="font-family:'Times New Roman', Times, serif">TEAMET BAKOM *NAM*</h1>
                </div>
               <br />
               <div class="second">
                   <br />
-                  <p>
-                      Vi är 3 stycken miljömedvetna, ambitiösa <br />
+                  <p style="font-family:'Times New Roman', Times, serif">
+                      Vi är 3 stycken miljömedvetna och ambitiösa <br />
                       personer som brinner för att minska dagens <br />
-                      gigantiska matsvinn. Dels genom <br />
-                      personliga handlingar som att inte lita <br />
-                      blint på "bäst före datum" men också <br />
+                      gigantiska matsvinn. Detta gör vi genom <br />
+                      personliga handlingar som blunda <br />
+                      på "bäst före datum" men också <br />
                       genom användningen av vår webbsida <br />
                       NAM
                   </p>
               </div>
               <div class="third">
                   <br />
-                  <h1>Dreams & visions</h1>
-                  <h3>"Set your goals high and don't stop until you get there"</h3>
-                  
+                  <h1 style="color:aqua; font-family:'Bradley Hand ITC'">Dreams & visions</h1>
+                  <h3 style="font-family:'Bradley Hand ITC'">"Set your goals high and don't stop until you get there"</h3>
               </div>
                <br />
                <div class="fourth">
-                   <p>
+                   <p style="font-family:'Times New Roman', Times, serif">
                       Vi drömmer såklart om <br />
                       att uppnå en minskat matsvinn på <br />
-                      ett sätt som är enkelt för alla, och <br />
-                      som verkan kostar i tid eller <br />
-                      pengar. Men vi hoppas även på <br />
-                      att vårt arbete ska öka kunskapen <br />
+                      ett sätt som är enkelt för alla och <br />
+                      som varken kostar tid eller <br />
+                      pengar. Vi hoppas även på <br />
+                      att vårt arbeteökar kunskapen <br />
                       om matsvinnets negativa <br />
                       mjlöpåverkan.
                   </p>
