@@ -87,6 +87,7 @@ namespace NAM.Database
             }
             return storeName;
 
+        }
         //Change status of logged in restaurant to isLogged = true
         public void changeLoggedStatus()
         {
