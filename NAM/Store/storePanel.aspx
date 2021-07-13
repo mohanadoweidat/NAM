@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="storePanel.aspx.cs" Inherits="NAM.Store.storePanel" %>
-
+<%--Created by : Sahand Poursadeghi Khiavi--%>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
      <title>Restaurant Panel</title>
