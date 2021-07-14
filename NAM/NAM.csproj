@@ -84,6 +84,7 @@
     <Content Include="policy.aspx" />
     <Content Include="signUp.aspx" />
     <Content Include="Store\firstLogin.aspx" />
+    <Content Include="Store\orderedProducts.aspx" />
     <Content Include="Store\storeInformation.aspx" />
     <Content Include="Store\storePanel.aspx" />
     <Content Include="User\userOrders.aspx" />
@@ -156,6 +157,13 @@
     </Compile>
     <Compile Include="Store\firstLogin.aspx.designer.cs">
       <DependentUpon>firstLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Store\orderedProducts.aspx.cs">
+      <DependentUpon>orderedProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Store\orderedProducts.aspx.designer.cs">
+      <DependentUpon>orderedProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Store\storeInformation.aspx.cs">
       <DependentUpon>storeInformation.aspx</DependentUpon>
