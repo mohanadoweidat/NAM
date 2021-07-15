@@ -9,9 +9,30 @@ namespace NAM.Store
 {
     public partial class orderedProducts : System.Web.UI.Page
     {
+        private Database.DB dB;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["logged_User"] != null)
+            {
+                dB = new Database.DB();
+                storeNameLbl.Text = dB.getStoreNameByUsername(Session["logged_User"].ToString());
+                logOut_Btn.Style.Add("display", "block");
+            }
+            if (!IsPostBack)
+            {
+                bindGrid();
+            }
+            logOut_Btn.ServerClick += logOut_Btn_ServerClick;
+        }
 
+        private void logOut_Btn_ServerClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+        private void bindGrid()
+        {
+            ordersGrid.DataSource = SqlDataSource1;
+            ordersGrid.DataBind();
         }
     }
 }
