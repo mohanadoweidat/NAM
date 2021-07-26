@@ -28,15 +28,17 @@ namespace NAM
                 logIn_Btn.Visible = true;
                 signUp_Btn.Visible = true;
             }
-            logIn_Btn.ServerClick += LogIn_Btn_ServerClick;
-            signUp_Btn.ServerClick += SignUp_Btn_ServerClick;
-            logOut_Btn.ServerClick += LogOut_Btn_ServerClick;
-            dash_Btn.ServerClick += Dash_Btn_ServerClick;
-
+            logIn_Btn.ServerClick += logIn_Btn_ServerClick;
+            signUp_Btn.ServerClick += signUp_Btn_ServerClick;
+            logOut_Btn.ServerClick += logOut_Btn_ServerClick;
+            dash_Btn.ServerClick += dash_Btn_ServerClick;
         }
 
-        private void Dash_Btn_ServerClick(object sender, EventArgs e)
-        {
+        /**
+         * This function is used when the user press dash button.
+         * The button will redirect the user to the right panel based on user type.
+         */
+        private void dash_Btn_ServerClick(object sender, EventArgs e){
             dB = new Database.DB();
             char userType = dB.checkUserType();
             //If u press panel button and u are a user
@@ -56,19 +58,19 @@ namespace NAM
             }
         }
 
-        private void LogOut_Btn_ServerClick(object sender, EventArgs e)
-        {
+        // This function will fire when the user press logout button.
+        private void logOut_Btn_ServerClick(object sender, EventArgs e){
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "logOut()", true);
             Session.Abandon();
         }
 
-        private void SignUp_Btn_ServerClick(object sender, EventArgs e)
-        {
+        //This function will redirect the user to signup page when the user press the signup button.
+        private void signUp_Btn_ServerClick(object sender, EventArgs e){
             Response.Redirect("signUp.aspx");
         }
 
-        private void LogIn_Btn_ServerClick(object sender, EventArgs e)
-        {
+        //This function will redirect the user to login page when the user press the login button.
+        private void logIn_Btn_ServerClick(object sender, EventArgs e){
             Response.Redirect("logIn.aspx");
         }
     }
