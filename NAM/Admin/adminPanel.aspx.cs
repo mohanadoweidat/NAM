@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace NAM.Admin
 {
@@ -13,11 +9,8 @@ namespace NAM.Admin
     {
         private bool emailExist = false;
         private bool usernameExist = false;
-        private bool checkFlag = false;
-        private string id = "";
         private SqlConnection sql;
         private SqlCommand cmd;
-        private SqlDataReader sqlDataReader;
         private Database.DB dB;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -28,15 +21,16 @@ namespace NAM.Admin
                 logOut_Btn.Style.Add("display", "block");
                 bindGrid();
             }
-            logOut_Btn.ServerClick += LogOut_Btn_ServerClick;
-            add_Btn.ServerClick += Add_Btn_ServerClick;
-             
+            logOut_Btn.ServerClick += logOut_Btn_ServerClick;
+            add_Btn.ServerClick += add_Btn_ServerClick; 
         }
 
          
-
-        private void Add_Btn_ServerClick(object sender, EventArgs e)
-        {
+        /*
+         * This function will fire when the admin press add button
+         * This will add a restaurant to the database.
+         */
+        private void add_Btn_ServerClick(object sender, EventArgs e){
             if (username.Value == "" || email.Value == "" || pwd.Value == "")
             {
 
@@ -88,7 +82,6 @@ namespace NAM.Admin
                     cmd.ExecuteNonQuery(); //executing the sqlcommand
                     sql.Close(); // Close the connection to the database
                     Session["logged_User"] = username.Value.ToString();
-                    id = Session["logged_User"].ToString();
                     Clear(); // Clear the fields
                     ClientScript.RegisterStartupScript(Page.GetType(), "text", "addStore()", true);
                     bindGrid();
@@ -96,14 +89,17 @@ namespace NAM.Admin
             }
         }
 
-        private void LogOut_Btn_ServerClick(object sender, EventArgs e)
-        {
+        // This function will fire when the user press logout button.
+        private void logOut_Btn_ServerClick(object sender, EventArgs e){
             Session.Abandon();
             Response.Redirect("../index.aspx");
         }
 
-        private void bindGrid()
-        {
+        /**
+         * This function will fill the grid from the databse.
+         * This will show the connected restaurant from the databse.
+         */
+        private void bindGrid(){
             dB = new Database.DB();
             if (dB.getStoreNameData() == null)
             {
@@ -121,8 +117,8 @@ namespace NAM.Admin
             }
         }
 
-        private void Clear()
-        {
+        //This function will clear the fields.
+        private void Clear(){
             username.Value = email.Value = pwd.Value = "";
         }
     }
