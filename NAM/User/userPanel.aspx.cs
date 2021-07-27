@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -14,7 +11,6 @@ namespace NAM.User
         private SqlConnection con;
         private SqlCommand cmd;
         private string loggeduserName = "";
-
         private Label productName;
         private Label newPrice;
         private Label pickUpTime;
@@ -31,17 +27,17 @@ namespace NAM.User
                 logOut_Btn.Style.Add("display", "block");
             }
             bindGrid();
-            logOut_Btn.ServerClick += LogOut_Btn_ServerClick;
+            logOut_Btn.ServerClick += logOut_Btn_ServerClick;
         }
 
-        private void LogOut_Btn_ServerClick(object sender, EventArgs e)
-        {
+        // This function will fire when the user press logout button
+        private void logOut_Btn_ServerClick(object sender, EventArgs e){
             Session.Abandon();
             Response.Redirect("../index.aspx");
         }
 
-        protected void orderBtn_Click(object sender, EventArgs e)
-        {
+        //This function will fire when the user press order button
+        protected void orderBtn_Click(object sender, EventArgs e){
             LinkButton lb = (LinkButton)sender;
          
             foreach (GridViewRow row in orderGrid.Rows)
@@ -104,8 +100,8 @@ namespace NAM.User
             }
         }
 
-        private void bindGrid()
-        {
+        //This function fill the grid with products that user can buy.
+        private void bindGrid(){
             if (!IsPostBack)
             {
                 orderGrid.DataSource = SOURCE1;
@@ -113,8 +109,8 @@ namespace NAM.User
             }
         }
 
-        private void deleteProductsWithNoQuantity()
-        {
+        //This function will delete all the products without quantity(sold out) from the grid.
+        private void deleteProductsWithNoQuantity(){
             con = new SqlConnection(Database.connectionString.conString);
             con.Open(); // Open the connection to the database
             string procedureName = "Products_DeleteNoQuantity"; //Stored Procedure name
