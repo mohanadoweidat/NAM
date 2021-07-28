@@ -12,24 +12,25 @@ namespace NAM
         private string id = "";
         private SqlConnection sql;
         private SqlCommand cmd;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            signUp_Btn.ServerClick += SignUp_Btn_ServerClick;
-            logIn_Btn.ServerClick += LogIn_Btn_ServerClick;
-            newLogIn_btn.ServerClick += NewLogIn_btn_ServerClick;
+            signUp_Btn.ServerClick += signUp_Btn_ServerClick;
+            logIn_Btn.ServerClick += logIn_Btn_ServerClick;
+            newLogIn_btn.ServerClick += newLogIn_btn_ServerClick;
         }
 
-        private void NewLogIn_btn_ServerClick(object sender, EventArgs e)
-        {
+        //This function will send you to the logIn site
+        private void newLogIn_btn_ServerClick(object sender, EventArgs e){
             Response.Redirect("logIn.aspx");
         }
-         private void LogIn_Btn_ServerClick(object sender, EventArgs e)
-        {
+
+        //This function will send you to the logIn site
+        private void logIn_Btn_ServerClick(object sender, EventArgs e){
             Response.Redirect("logIn.aspx");
         }
-         private void SignUp_Btn_ServerClick(object sender, EventArgs e)
-        {
+
+        //This function will redirect the user to signup page when the user press the signup button.
+        private void signUp_Btn_ServerClick(object sender, EventArgs e){
             if (username.Value == "" || email.Value == "" || pwd.Value == "")
             {
 
@@ -91,12 +92,14 @@ namespace NAM
                 }
             }
         }
-        private void Clear()
-        {
+
+        //This function will clear all the fields
+        private void Clear(){
             username.Value = email.Value = pwd.Value = "";
         }
-        private void disableFields()
-        {
+
+        //This function will disable the fields
+        private void disableFields(){
             username.Disabled = true;
             email.Disabled = true;
             pwd.Disabled = true;
