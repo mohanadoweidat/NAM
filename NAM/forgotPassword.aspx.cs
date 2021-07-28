@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace NAM
 {
@@ -14,10 +10,14 @@ namespace NAM
         private string userPassword;
         protected void Page_Load(object sender, EventArgs e)
         {
-            getPwd_Btn.ServerClick += GetPwd_Btn_ServerClick;
+            getPwd_Btn.ServerClick += getPwd_Btn_ServerClick;
         }
 
-        private void GetPwd_Btn_ServerClick(object sender, EventArgs e)
+        /**
+         * This function will run when the user press gett password button.
+         * This function will give the user a password based on the entered username.
+         */
+        private void getPwd_Btn_ServerClick(object sender, EventArgs e)
         {
             string userInput = username.Value;
             if (userInput != "")
