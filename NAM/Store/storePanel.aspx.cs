@@ -10,16 +10,14 @@ using System.Web.UI.WebControls;
 
 namespace NAM.Store
 {
-    public partial class storePanel : System.Web.UI.Page
-    {
+    public partial class storePanel : System.Web.UI.Page{
         private Database.DB dB;
         private SqlConnection con;
         private SqlCommand cmd;
         private SqlDataReader sqlData;
         string storeName = "";
         private Byte[] bytes;
-        protected void Page_Load(object sender, EventArgs e)
-        {
+        protected void Page_Load(object sender, EventArgs e){
             if (Session["logged_User"] != null)
             {
                 dB = new Database.DB();
@@ -34,26 +32,27 @@ namespace NAM.Store
             logOut_Btn.ServerClick += logOut_Btn_ServerClick;
         }
 
-        private void logOut_Btn_ServerClick(object sender, EventArgs e)
-        {
+        // This function will fire when the user press logout button.
+        private void logOut_Btn_ServerClick(object sender, EventArgs e){
             Session.Abandon();
             Response.Redirect("../index.aspx");
         }
-        private void bindGrid()
-        {
+
+        // This function will fill the grid view with data from the database
+        private void bindGrid(){
             GridView1.DataSource = SqlDataSource1;
             GridView1.DataBind();
         }
 
-        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        {
+        // This function is used when the user press cancel button
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e){
             GridView1.EditIndex = -1;
             GridView1.DataSource = SqlDataSource1;
             GridView1.DataBind();
         }
 
-        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
+        // This function is used when the user presses Delete
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e){
             Label productId = GridView1.Rows[e.RowIndex].FindControl("label1") as Label;
             string deleteQuery = "delete from Products where product_Id=" + productId.Text;
             con = new SqlConnection(Database.connectionString.conString);
@@ -66,17 +65,17 @@ namespace NAM.Store
             GridView1.DataBind();
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "doneDelete()", true);
         }
-
-        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
-        {
+        
+        // This function is used when the user presses edit button
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e){
             GridView1.EditIndex = e.NewEditIndex;
             GridView1.DataSource = SqlDataSource1;
             GridView1.DataBind();
             GridView1.EditRowStyle.BackColor = System.Drawing.Color.Orange;
         }
 
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
+        // This function is used when the user presses update button
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e){
             Label productId = GridView1.Rows[e.RowIndex].FindControl("label7") as Label;
             TextBox productName = GridView1.Rows[e.RowIndex].FindControl("TextBox1") as TextBox;
             TextBox productDesc = GridView1.Rows[e.RowIndex].FindControl("TextBox2") as TextBox;
@@ -115,8 +114,8 @@ namespace NAM.Store
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "doneEditing();", true);
         }
 
-        protected void addBtn_Click(object sender, EventArgs e)
-        {
+        // This function is used when the user presses add button
+        protected void addBtn_Click(object sender, EventArgs e){
             TextBox productName = GridView1.FooterRow.FindControl("TextBox7") as TextBox;
             TextBox productDesc = GridView1.FooterRow.FindControl("TextBox8") as TextBox;
             TextBox orginalPrice = GridView1.FooterRow.FindControl("TextBox9") as TextBox;
@@ -164,8 +163,8 @@ namespace NAM.Store
             }
         }
 
-        protected void add_Empty_Click(object sender, EventArgs e)
-        {
+        // This function is used to add products
+        protected void add_Empty_Click(object sender, EventArgs e){
             Label productID = GridView1.Controls[0].FindControl("productID") as Label;
             TextBox productName = GridView1.Controls[0].Controls[0].FindControl("productNameBox") as TextBox;
             TextBox productDescBox = GridView1.Controls[0].Controls[0].FindControl("productDescBox") as TextBox;
