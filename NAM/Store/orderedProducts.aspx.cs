@@ -27,7 +27,8 @@ namespace NAM.Store
 
         private void logOut_Btn_ServerClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Session.Abandon();
+            Response.Redirect("../index.aspx");
         }
         private void bindGrid()
         {

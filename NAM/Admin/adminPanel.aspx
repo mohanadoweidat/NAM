@@ -79,9 +79,9 @@
 
         /* Start footer rules */
         .egen2 {
-            /* position: fixed;
+             position: fixed;
             bottom: 0;
-            width: 100%;*/
+            width: 100%;
         }
 
         .copyright {
@@ -181,19 +181,8 @@
                 <br />
                 <button runat="server" id="add_Btn" class="btnStyle">Lägg till</button>
             </div>
-
-               <div class="clear"></div>
-            <h2 class="first">Ta bort en restaurang</h2>
-            <div class="second">
-                <br />
-                <label for="username">Användarnamn:</label>
-                <br />
-                <input runat="server" class="egen" id="usernameDel" />
-                <br />
-                <br />
-                <button runat="server" id="delete_Btn" class="btnStyle">Ta bort</button>
-            </div>
-        </center>
+                <div class="clear"></div>
+         </center>
 
          <!--  footer -->
         <div class="copyright egen2">

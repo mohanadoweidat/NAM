@@ -57,6 +57,14 @@
             .fourth {
                 width: 70%;
             }
+
+             .egen2 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: inline-block;
+            }
+
         }
 
         @media screen and (max-width: 600px) {
@@ -66,6 +74,13 @@
             .third,
             .fourth {
                 width: 70%;
+            }
+
+             .egen2 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: inline-block;
             }
         }
 
@@ -77,13 +92,19 @@
             .fourth {
                 width: 70%;
             }
+
+            .egen2 {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: inline-block;
+            }
         }
 
         /* Start footer rules */
         .egen2 {
-            /*  position: fixed;
-            bottom: 0;
-            width: 100%;*/
+            width: 100%;
+            display: inline-block;
         }
 
         .copyright {
@@ -103,6 +124,14 @@
                 color: #f70e0e
             }
         /* End footer rules */
+
+        /* Start Content (Grid) style */
+   .content {
+   /* display: inline-block;
+     width : 100%;*/
+   min-height: calc(50vh - 100px);
+ }
+   /* End Content (Grid) style */
     </style>
 
 
@@ -157,7 +186,7 @@
             <div class="clear"></div>
             <h2 class="first">Produkter att beställa</h2>
            
-              <div class="container-fluid">
+              <div class="container-fluid content">
     <div class="row">
       <div class="col-lg-12">
         <div class="table-responsive text-center">
