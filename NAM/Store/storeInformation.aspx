@@ -110,6 +110,9 @@
                 color: #f70e0e
             }
         /* End footer rules */
+        .notbold{
+            font-weight:normal !important 
+        }
     </style>
 </head>
 <body>
@@ -155,14 +158,14 @@
          <br />
          <center>
               <div class="first">
-                <h1>Resataurant Information
+                <h1 class ="notbold">Restaurant Information
                     <br />
                     <br />
                    Här kan du se dina information samt ändra de.
                  </h1>
             </div>
          <br />
-            <h2 class="first">Ändra din information</h2>
+            <h2 class="first notbold">Ändra din information</h2>
             <div class="second">
                 <br />
                 <label for="storeName">Restaurant namn:</label>

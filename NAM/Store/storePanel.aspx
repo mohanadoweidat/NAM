@@ -160,7 +160,7 @@
           <br />
          <center>
               <div class="first">
-                <h1>Resataurant Panel
+                <h1>Restaurant Panel
                     <br />
                     <br />
                    Välkommen tillbaka: <asp:Label ID="wlcLbl" runat="server"></asp:Label>
