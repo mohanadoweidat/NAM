@@ -7,6 +7,11 @@
      <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+     <!-- Info messages/alert -->
+    <script src="../js/infoMessages.js"></script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
       <!-- Content style-->
     <style>
         .first {
@@ -59,7 +64,7 @@
             .fourth {
                 width: 70%;
             }
-        }
+          }
 
 
 
@@ -71,7 +76,7 @@
             .fourth {
                 width: 70%;
             }
-        }
+         }
 
 
         @media screen and (max-width: 480px) {
@@ -82,33 +87,29 @@
             .fourth {
                 width: 70%;
             }
-        }
+         }
     </style>
      <!-- Footer style-->
     <style>
         /* Start footer rules */
-        .egen2 {
-            /*  position: fixed;
-            bottom: 0;
-            width: 100%;*/
-        }
-
-        .copyright {
+         .copyright {
             background-color: aquamarine;
             padding: 20px 0px;
             margin-top: 90px;
+            position: fixed;
+            bottom: 0;
+            width: 99%;
+            
         }
-
-            .copyright p {
-                color: #023023;
-                font-size: 18px;
-                line-height: 22px;
-                text-align: center;
-            }
-
-            .copyright a:hover {
-                color: #f70e0e
-            }
+         .copyright p {
+             color: #023023;
+             font-size: 18px;
+             line-height: 22px;
+             text-align: center;
+         }
+         .copyright a:hover {
+             color: #f70e0e
+         }
         /* End footer rules */
     </style>
 </head>
@@ -139,10 +140,10 @@
             </div>
             </center>
          <!--  footer -->
-        <div class="copyright egen2">
+        <div class="copyright">
             <p>© 2021 All Rights Reserved. NAM</p>
         </div>
         <!-- end footer -->
-    </form>
+      </form>
 </body>
 </html>
