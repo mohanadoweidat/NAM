@@ -31,10 +31,10 @@
 
         /*The footer will stay at the bottom*/
         .egen {
-            position: fixed;
+          /*  position: fixed;
             bottom: 0;
             width: 100%;
-            height: auto
+            height: auto; */   
         }
 
         * {
@@ -343,7 +343,7 @@
             </div>
           </center>
          <br />
-          <br />
+          
             <!--Content-->
  <div class="container">
   <form>

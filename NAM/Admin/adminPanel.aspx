@@ -53,7 +53,7 @@
             .second,
             .third,
             .fourth {
-                width: 70%;
+                width: 80%;
             }
         }
 
@@ -63,7 +63,7 @@
             .second,
             .third,
             .fourth {
-                width: 70%;
+                width: 80%;
             }
         }
 
@@ -73,7 +73,7 @@
             .second,
             .third,
             .fourth {
-                width: 70%;
+                width: 80%;
             }
         }
 
@@ -147,7 +147,7 @@
              <div class="clear"></div>
             <h2 class="first">Anslutna restauranger/mataffärer/cafeer</h2>
             <div class="second">
-               <h1><asp:Label ID="emptyGrid" runat="server"></asp:Label></h1> 
+               <h2><asp:Label ID="emptyGrid" runat="server"></asp:Label></h2> 
                 <asp:GridView ID="connectedStoreGrid" CssClass="second" runat="server" BackColor="White" BorderColor="#336666"
                     BorderStyle="Outset" BorderWidth="3px" CellPadding="4" GridLines="Both">
                     <FooterStyle BackColor="White" ForeColor="#333333"></FooterStyle>
