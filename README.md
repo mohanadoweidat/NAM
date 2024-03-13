@@ -1,13 +1,15 @@
-# NAM
--  Ett projekt för kursen : Systemutveckling och projekt 1
+# Projektbeskrivning: Minska Matsvinnet (NAM)
 
-* En webbsida som hjälper med att minska matsvinnet, genmom att alla restauranger kan lägga upp maten som ananrs skulle ha slängts. Användaren kan då beställa det för ett raabbaterat pris.
+Detta är ett projekt inom kursen Systemutveckling och projekt 1, som syftar till att bidra till minskningen av matsvinn. Genom att skapa en webbplattform ger vi restauranger möjligheten att annonsera överbliven mat, som annars skulle kastas, till ett reducerat pris. Användare kan i sin tur beställa denna mat, vilket gynnar både plånboken och miljön.
 
+## Skapare
+Projektet är utvecklat av:
+- Mohanad Oweidat
+- Bojana Filipovic
+- Sahand Poursadeghi Khiavi
 
+## Instruktioner för Användning
 
-Skapad av : -Mohanad Oweidat -Bojana Filipovic -Sahand Poursadeghi Khiavi
+För att starta webbapplikationen, öppna `index.aspx` filen som huvudklass. För att kunna köra projektet krävs att du har installerat `Asp.net web development` biblioteket i Visual Studio. Följ dessa steg för att sätta upp och köra applikationen på din lokala maskin.
 
-#Instruktioner
-
-* Man startar webbsidan med klassen index.aspx
-* Man måste ha biblioteket : Asp.net web development i Visualstudio för att kunna köra koden.
+Denna webbapplikation erbjuder en direkt och effektiv lösning för att minska matsvinnet, samtidigt som den främjar hållbar konsumtion och hjälper restauranger att minska sina förluster.
